@@ -1,0 +1,371 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%; 
+  max-height: 80%;
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#caption {
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+.birthday-message {
+  font-family: '宋体', Arial, sans-serif; 
+  font-size: 36px; 
+  color: white; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+body {
+  font-family:"Microsoft YaHei";
+  color: white;
+  font-weight: 300;
+}
+body ::-webkit-input-placeholder {
+
+  font-family:"Microsoft YaHei";
+  color: white;
+  font-weight: 300;
+}
+body :-moz-placeholder {
+
+  font-family:"Microsoft YaHei";
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+}
+body ::-moz-placeholder {
+
+  font-family:"Microsoft YaHei";
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+}
+body :-ms-input-placeholder {
+
+  font-family:"Microsoft YaHei";
+  color: white;
+  font-weight: 300;
+}
+.wrapper {
+  background: #89CFF0; 
+  background: -webkit-linear-gradient(top left, #89CFF0 0%, #FFC0CB 100%); 
+  background: linear-gradient(to bottom right, #89CFF0 0%, #FFC0CB 100%);
+  background-color: rgba(255, 255, 255, 0.9); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.wrapper.form-success .container h1 {
+  -webkit-transform: translateY(85px);
+      -ms-transform: translateY(85px);
+          transform: translateY(85px);
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 7%;
+  padding: 80px 0;
+  height: 400px;
+  text-align: center;
+}
+.container h1 {
+  font-size: 40px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-put;
+          transition-timing-function: ease-in-put;
+  font-weight: 200;
+}
+form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+form input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form input:focus {
+  background-color: white;
+  width: 300px;
+  color: #79A8AE;
+}
+form button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  font-family: "Microsoft YaHei";
+  border: 0;
+  padding: 10px 15px;
+  color: #79A8AE;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+form button:hover {
+  background-color: #f5f7f9;
+}
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 100px; /* 图片宽度 */
+  height: 100px; /* 图片高度 */
+  bottom: -160px;
+  -webkit-animation: bubble-animation 30s infinite; /* 动画 */
+  animation: bubble-animation 30s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.bg-bubbles li img {
+  width: 100%; /* 图片填充 li 元素 */
+  height: 100%;
+  object-fit: contain; /* 确保图片比例 */
+}
+
+.bg-bubbles li:nth-child(1) {
+  left: 85%;            /* 水平位置 */
+  width: 85px;         /* 图片宽度 */
+  height: 85px;        /* 图片高度 */
+  -webkit-animation-delay: 0s;  /* 动画延迟 */
+  animation-delay: 0s;
+  -webkit-animation-duration: 25s; /* 动画持续时间 */
+  animation-duration: 25s;
+}
+
+
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  width: 105px;
+  height: 105px;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-duration: 28s;
+  animation-duration: 28s;
+}
+
+.bg-bubbles li:nth-child(4) {
+  left: 35%;
+  width: 90px;
+  height: 90px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 26s;
+  animation-duration: 26s;
+}
+
+
+.bg-bubbles li:nth-child(6) {
+  left: 55%;
+  width: 90px;
+  height: 90px;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+
+.bg-bubbles li:nth-child(7) {
+  left: 65%;
+  width: 105px;
+  height: 105px;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+  -webkit-animation-duration: 23s;
+  animation-duration: 23s;
+}
+
+.bg-bubbles li:nth-child(8) {
+  left: 75%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+  -webkit-animation-duration: 27s;
+  animation-duration: 27s;
+}
+
+.bg-bubbles li:nth-child(9) {
+  left: 85%;
+  width: 85px;
+  height: 85px;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-duration: 24s;
+  animation-duration: 24s;
+}
+
+.bg-bubbles li:nth-child(10) {
+  left: 95%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(11) {
+  left: 10%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(13) {
+  left: 30%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(14) {
+  left: 40%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 11s;
+  animation-delay: 11s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(15) {
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(17) {
+  left: 70%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(18) {
+  left: 80%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+.bg-bubbles li:nth-child(19) {
+  left: 90%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 21s;
+  animation-duration: 21s;
+}
+
+@-webkit-keyframes bubble-animation {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg); /* 起始位置 */
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-900px) rotate(600deg); /* 结束位置和旋转 */
+    transform: translateY(-900px) rotate(600deg);
+  }
+}
+
+@keyframes bubble-animation {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg); /* 起始位置 */
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-900px) rotate(600deg); /* 结束位置和旋转 */
+    transform: translateY(-900px) rotate(600deg);
+  }
+}
